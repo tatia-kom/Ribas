@@ -1,0 +1,323 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Ribas
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        section.top
+            div.top__bg
+                img.active#service1-img(src="img/top1.png")
+                img#service2-img(src="img/top2.png")
+                img#service3-img(src="img/top3.png")
+                img#service4-img(src="img/top4.png")
+
+            div.top__container
+                div.top__scroll
+                    div.top__items
+                        div.top-item.top-item--active(data-block="#service1")
+                            div.top-item__icon
+                                img(src="img/service1.svg")
+                            p.top-item__name Гостиничный девелопмент
+
+                        div.top-item(data-block="#service2")
+                            div.top-item__icon
+                                img(src="img/service2.svg")
+                            p.top-item__name Гостиничная франшиза
+
+                        div.top-item(data-block="#service3")
+                            div.top-item__icon
+                                img(src="img/service3.svg")
+                            p.top-item__name Управление и бронирование
+
+                        div.top-item(data-block="#service4")
+                            div.top-item__icon
+                                img(src="img/service4.svg")
+                            p.top-item__name Гостиничный консалтинг
+
+                div.top__block-wrap
+                    div.top-block.top-block--active#service1
+                        p.top-block__title Гостиничный девелопмент
+                        p.top-block__text Запускаем гостиничные объекты «с нуля»: от консультации и бизнес-планирования до строительства и комплектации
+                        div.top-block__buttons
+                            a.top-block__button(href="") О проектировании
+                            a.top-block__button(href="") О строительстве
+
+                    div.top-block#service2
+                        p.top-block__title Гостиничная франшиза
+                        p.top-block__text Managed by Ribas. <br/>Готовое решение для запуска бизнеса
+                        div.top-block__buttons
+                            a.top-block__button(href="") Инвесторам
+                            a.top-block__button(href="") О франшизе
+
+                    div.top-block#service3
+                        p.top-block__title Управление и бронирование
+                        p.top-block__text Проводим удаленное управление каналами продаж, занимаемся маркетингом и рекламой отеля, а также бронированием и корпоративными продажами
+                        div.top-block__buttons
+                            a.top-block__button(href="") Об управлении
+                            a.top-block__button(href="") Маркетинг и бронирование
+
+                    div.top-block#service4
+                        p.top-block__title Гостиничный консалтинг
+                        p.top-block__text Проводим маркетинговое исследование рынка, а также разрабатываем концепцию объекта, бизнес-планирование и архитектурный проект. Даем рекомендации, основываясь на результатах аудита
+                        div.top-block__buttons
+                            a.top-block__button(href="") О консалтинге
+                            a.top-block__button(href="") Разработка <br />концепции
+                            a.top-block__button.top-block__button--t10(href="") Игорный бизнес
+                            a.top-block__button.top-block__button--t10(href="") Купить или <br />продать отель
+
+                button.top-play
+                    span.top-play__icon
+                        <svg width="27" height="38" viewBox="0 0 27 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.93534L24.5215 18.6195L0.999998 35.3038L1 1.93534Z" fill="white" stroke="white" stroke-width="2"/>
+                        </svg>
+                    span.top-play__text Cмотреть видео
+
+            button.top__down
+                img(src="img/down.svg")
+
+        section.about#company
+            div.about__container
+                h2.about__title О компании
+
+                div.about__content
+                    div.about__text
+                        p Мы, <strong>Гостиничная управляющая компания сетью отелей Ribas Hotels Group</strong>. Развиваем инвестиционные проекты. Эксперт в управлении гостиничной недвижимостью. В портфель компании вошли 25 успешно действующих объектов: 3*-4* отели, санатории, базы отдыха, апартаменты и хостелы.
+                        p Мы не заложим и камня, пока не ответим себе и вам: “Где здесь прибыль: когда, сколько и каким образом окупится ваш отель?”
+                        p Потому что каждый год мы с нуля запускаем все наши курортные отели. Это то же что и запуск обычного отеля, только в три раза специфичнее и сложнее.
+                        p Если я утомил вас своей мотивирующей речью, просто посмотрите на наши проекты и напишите мне.
+                    div.about__right
+                        div.about__photo
+                            img(src="img/about-photo.png")
+                        p.about__name Артур Лупашко
+                        p.about__post Основатель Ribas Hotels Group
+
+        section.objects#objects
+            div.objects__container
+                h2.objects__title Наши объекты
+
+                div.objects__content
+                    div.objects__side
+                        div.objects-accordeon.objects-accordeon--active(data-photos="#hotels")
+                            span.objects-accordeon__num 01
+                            div.objects-accordeon__title Сеть отелей
+                            div.objects-accordeon__description(style="display: block") If you already have a business name, make that your domain. Otherwise, choose a domain name that’s short, pronounceable, and clearly communicates who you are.
+
+                        div.objects-accordeon(data-photos="#franchise")
+                            span.objects-accordeon__num 02
+                            div.objects-accordeon__title Франшиза
+                            div.objects-accordeon__description If you already have a business name, make that your domain. Otherwise, choose a domain name that’s short, pronounceable, and clearly communicates who you are.
+
+                        div.objects-accordeon(data-photos="#projecting")
+                            span.objects-accordeon__num 03
+                            div.objects-accordeon__title Стадия проектирования
+                            div.objects-accordeon__description If you already have a business name, make that your domain. Otherwise, choose a domain name that’s short, pronounceable, and clearly communicates who you are.
+
+                        div.objects-accordeon(data-photos="#building")
+                            span.objects-accordeon__num 04
+                            div.objects-accordeon__title Стадия строительства
+                            div.objects-accordeon__description If you already have a business name, make that your domain. Otherwise, choose a domain name that’s short, pronounceable, and clearly communicates who you are.
+
+                        div.objects-accordeon(data-photos="#investing")
+                            span.objects-accordeon__num 05
+                            div.objects-accordeon__title Инвест проекты
+                            div.objects-accordeon__description If you already have a business name, make that your domain. Otherwise, choose a domain name that’s short, pronounceable, and clearly communicates who you are.
+
+                    div.objects__side
+                        div.objects-photos.objects-photos--active#hotels
+                            a.objects-photos__item(href="")
+                                img(src="img/obj1.png")
+                                span Ribas
+                            a.objects-photos__item(href="")
+                                img(src="img/obj2.png")
+                                span Friday
+                            a.objects-photos__item(href="")
+                                img(src="img/obj3.png")
+                                span Wall street
+                            a.objects-photos__item(href="")
+                                img(src="img/obj4.png")
+                                span Bortoli
+                            a.objects-photos__item(href="")
+                                img(src="img/obj5.png")
+                                span Bossfor
+                            a.objects-photos__item(href="")
+                                img(src="img/obj6.png")
+                                span Bautzen
+                            a.objects-photos__item(href="")
+                                img(src="img/obj7.png")
+                                span Ribas Bukovel
+
+                        div.objects-photos#franchise
+                            a.objects-photos__item(href="")
+                                img(src="img/obj2.png")
+                                span Friday
+                            a.objects-photos__item(href="")
+                                img(src="img/obj4.png")
+                                span Bortoli
+                            a.objects-photos__item(href="")
+                                img(src="img/obj6.png")
+                                span Bautzen
+                            a.objects-photos__item(href="")
+                                img(src="img/obj7.png")
+                                span Ribas Bukovel
+
+                        div.objects-photos#projecting
+                            a.objects-photos__item(href="")
+                                img(src="img/obj7.png")
+                                span Ribas Bukovel
+                            a.objects-photos__item(href="")
+                                img(src="img/obj5.png")
+                                span Bossfor
+                            a.objects-photos__item(href="")
+                                img(src="img/obj1.png")
+                                span Ribas
+
+                        div.objects-photos#building
+                            a.objects-photos__item(href="")
+                                img(src="img/obj1.png")
+                                span Ribas
+
+                        div.objects-photos#investing
+                            a.objects-photos__item(href="")
+                                img(src="img/obj3.png")
+                                span Wall street
+                            a.objects-photos__item(href="")
+                                img(src="img/obj4.png")
+                                span Bortoli
+                            a.objects-photos__item(href="")
+                                img(src="img/obj5.png")
+                                span Bossfor
+                            a.objects-photos__item(href="")
+                                img(src="img/obj6.png")
+                                span Bautzen
+                            a.objects-photos__item(href="")
+                                img(src="img/obj7.png")
+                                span Ribas Bukovel
+
+        section.press#press
+            div.press__container
+                div.press__side
+                    h2.press__title Инвестиционные предложения
+
+                    div.press__flex.press__flex--tablet_sb
+                        a.press-invest(href="")
+                            span.press-invest__label АРЕНДАТОРАМ
+                            span.press-invest__img
+                                img(src="img/invest1.png")
+                            span.press-invest__name 5 star luxury appartments
+                            span.press-invest__city Киев
+                            span.press-invest__more Подробнее
+                                <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                                </svg>
+
+                        a.press-invest(href="")
+                            span.press-invest__label АРЕНДАТОРАМ
+                            span.press-invest__img
+                                img(src="img/invest2.png")
+                            span.press-invest__name 5 star luxury appartments
+                            span.press-invest__city Киев
+                            span.press-invest__more Подробнее
+                                <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                                </svg>
+
+                        a.press-invest(href="")
+                            span.press-invest__label АРЕНДАТОРАМ
+                            span.press-invest__img
+                                img(src="img/invest3.png")
+                            span.press-invest__name 5 star luxury appartments
+                            span.press-invest__city Киев
+                            span.press-invest__more Подробнее
+                                <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                                </svg>
+
+                        a.press-invest(href="")
+                            span.press-invest__label АРЕНДАТОРАМ
+                            span.press-invest__img
+                                img(src="img/invest4.png")
+                            span.press-invest__name 5 star luxury appartments
+                            span.press-invest__city Киев
+                            span.press-invest__more Подробнее
+                                <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                                </svg>
+
+                    a.button.press__more Больше
+                        <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                        </svg>
+
+                div.press__side
+                    h2.press__title Новости: интернет и СМИ
+
+                    div.press__flex
+                        a.press-news(href="")
+                            span.press-news__img
+                                img(src="img/news1.png")
+                            span.press-news__name Готельний бізнес Прикарпаття: готуємо сани влітку!
+                            span.press-news__description Ribas Hotels Group успішно розвиває тризіркові і чотиризіркові готелі...
+
+                        a.press-news(href="")
+                            span.press-news__img
+                                img(src="img/news2.png")
+                            span.press-news__name Готельний бізнес Прикарпаття: готуємо сани влітку!
+                            span.press-news__description Ribas Hotels Group успішно розвиває тризіркові і чотиризіркові готелі...
+
+                    h2.press__title.press__title--t50 Аналитика гостиничного бизнеса
+
+                    div.press__flex
+                        a.press__video(href="")
+                            img(src="img/press-video1.png")
+                        a.press__video(href="")
+                            img(src="img/press-video2.png")
+                        a.press__video(href="")
+                            img(src="img/press-video3.png")
+
+                    a.button.press__more Больше
+                        <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                        </svg>
+
+        section.contacts
+            div.contacts__container
+                h2.contacts__title Узнать больше
+
+                div.contacts__flex
+                    div.contacts__side
+                        form.contacts-form
+                            input.contacts-form__input(type="text" placeholder="Email")
+                            input.contacts-form__input(type="text" placeholder="Как к Вам обращаться?")
+                            button.button.contacts-form__button Отправить
+                                <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 4.75436H20.8178M20.8178 4.75436L17.3482 1M20.8178 4.75436L17.3482 8.50872" stroke="white" stroke-width="1.5"/>
+                                </svg>
+
+                    div.contacts__side
+                        div.contacts__flex
+                            div.contacts-soc
+                                div.contacts-soc__icon
+                                    img(src="img/contacts-tg.png")
+                                p.contacts-soc__text Telegram - что можно найти, ценность канала.
+
+                            div.contacts-soc
+                                div.contacts-soc__icon
+                                    img(src="img/contacts-insta.png")
+                                p.contacts-soc__text Instagram - что можно найти, ценность ,блога.
+
+                            div.contacts-soc
+                                div.contacts-soc__icon
+                                    img(src="img/contacts-fb.png")
+                                p.contacts-soc__text Facebook - что можно найти, ценность ,блога.
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug
