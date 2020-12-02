@@ -4,6 +4,7 @@
   position: relative;
   background: #14141B;
   padding-top: 31px;
+  overflow: hidden;
 
   @media (max-width: $sm) {
     padding-top: 15px;
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: column-reverse;
     padding-top: 0;
+    padding-bottom: 54px;
   }
 
   &__container {
@@ -43,6 +45,13 @@
     @media (max-width: $xs) {
       overflow: auto;
     }
+
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
   }
 
   &__items {
@@ -50,6 +59,7 @@
     background: rgba(255, 255, 255, 0.9);
     justify-content: space-between;
     position: relative;
+    z-index: 2;
   }
 
   &__block-wrap {
@@ -63,8 +73,8 @@
     }
 
     @media (max-width: $xs) {
-      width: 100%;
-      background: white;
+      width: 356px;
+      max-width: 100%;
       padding: 40px 20px 35px;
     }
   }
@@ -77,8 +87,20 @@
     bottom: 0;
 
     @media (max-width: $xs) {
-      position: relative;
-      height: 266px;
+      min-height: 518px;
+      height: auto;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -100px;
+        right: -100px;
+        top: 0;
+        height: 91px;
+        background: white;
+        z-index: 1;
+      }
     }
 
     img {
@@ -89,6 +111,7 @@
       object-position: center;
       opacity: 0;
       transition: 0.3s;
+      z-index: 0;
 
       &.active {
         opacity: 1;
